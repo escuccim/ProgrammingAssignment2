@@ -20,6 +20,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## For a CacheMatrix will return the cached inverse, if it exists.
 ## Otherwise will generate the inverse, cache it and return it.
+## For non-invertible matrices will print error and return NA
 
 cacheSolve <- function(x, ...) {
     inv <- x$getInverse()
