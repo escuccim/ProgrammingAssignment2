@@ -29,7 +29,6 @@ cacheSolve <- function(x, ...) {
         return(inv)
     }
     data <- x$get()
-    #inv <- solve(data, ...)
     inv <- tryCatch({
         solve(data, ...)
     }, error = function(error){
