@@ -29,6 +29,8 @@ cacheSolve <- function(x, ...) {
         return(inv)
     }
     data <- x$get()
+    
+    ## this block will catch errors for non-invertible matrices and return NA after printing the error
     inv <- tryCatch({
         solve(data, ...)
     }, error = function(error){
