@@ -30,7 +30,8 @@ cacheSolve <- function(x, ...) {
     }
     data <- x$get()
     
-    ## this block will catch errors for non-invertible matrices and return NA after printing the error
+    # this block will catch errors for non-invertible matrices and return NA after printing the error
+    # the assignment said to assume that the matrix is invertible, but as a programmer I just couldn't do it
     inv <- tryCatch({
         solve(data, ...)
     }, error = function(error){
